@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --accent-color: #f97316;
+    --accent-dark-color: #ea580c;
+    --dark-bg-color:#172554;
+    --light-bg-color:#dbeafe;
+    --text-light-color:#eff6ff;
+    --text-dark-color:#eff6ff;
+}
+
+
+body{
+    background-color: var(--light-bg-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 220px;
+    background-color: var(--dark-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    padding-bottom: 20px;
+}
+
+header .top-container{
+    width: 90%;
+    max-width: 500px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-container > div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-container .title-container{
+    color: var(--text-light-color);
+    flex-direction: column;
+}
+
+.title-container .title{
+    margin-bottom: 5px;
+}
+
+.top-container .input-container{
+    height:35px;
+}
+
+.input-container .input-todo{
+    height: 100%;
+    width: 80%;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 1rem;
+    background-color: var(--light-bg-color);
+}
+.input-container .add-todo{
+    height: 100%;
+    width: 18%;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    background-color:var(--accent-color);
+    font-size: 1.25rem;
+    color: var(--text-light-color);
+    cursor: pointer;
+    transition: ease .5s;
+}
+
+.input-container .add-todo:hover{
+    background-color: var(--accent-dark-color);
+}
+
+
+
+.todo-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 30px;
+    gap: 30px;
+}
+
+.countTask-container{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    height: 25px;
+    max-width: 500px;
+}
+.countTask-container > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--dark-bg-color);
+    border-radius: 5px;
+    width: 130px;
+}
+
+.countTask-container > div > p{
+    width: 80%;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.countTask-container > div > span{
+    background-color: var(--dark-bg-color);
+    width: 20%;
+    height: 100%;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:var(--text-light-color);
+    font-weight: bold;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.todo-container .todo-list{
+    list-style: none;
+    width: 90%;
+    max-width: 500px;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: auto;
+}
+
+.todo-list .checkbox{
+    width: 15px;
+    height: 15px;
+    accent-color: var(--accent-dark-color);
+    margin-right: 5px;
+}
+
+.todo-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--dark-bg-color);
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #bfdbfe;
+}
+
+.todo-item:has(input:checked) .todo{
+    text-decoration: line-through;
+    color: #6b7280;
+}
+
+
+.todo-item .todo{
+    height: 30px;
+    width: 75%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    resize: none;
+    color:var(--dark-bg-color);
+    padding-top: 4px;
+}
+
+.todo-item .btn-container{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.btn-container,.save, .edit, .delete{
+    font-size: 14px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+.save:hover, .edit:hover, .delete:hover{
+    scale: 1.2;
+}
+
